@@ -1,0 +1,14 @@
+// add all variables here like colors, font-family, constant heights / widths / breakpoints
+$primary-color: #2771bb;
+
+// keep all z-indexes here
+$z-index-loading-overlay: 10;
+// $z-index-footer: 5;
+// $z-index-navbar: 10;
+// $z-index-modal: 30;
+
+// the :export directive is the magic sauce for webpack
+// Export variables that you need from JS to have a single source of truth
+:export {
+  primaryColor: $primary-color;
+}

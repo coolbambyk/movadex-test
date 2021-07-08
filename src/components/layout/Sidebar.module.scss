@@ -1,0 +1,27 @@
+:global(.sidebar) .sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nav {
+  overflow: auto;
+  flex: 1 1 auto;
+  // flex: 1 0 auto;
+  // max-height: 100%;
+}
+
+:global(.sidebar) .bottomNav {
+  margin-top: 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 15px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background: rgba(255, 255, 255, 0.5);
+  }
+}

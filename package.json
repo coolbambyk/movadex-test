@@ -1,0 +1,76 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "12.8.2",
+    "bootstrap": "4.6.0",
+    "classnames": "2.2.6",
+    "events": "3.3.0",
+    "joi": "17.4.0",
+    "lodash": "4.17.21",
+    "lowdb": "1.0.0",
+    "minimongo": "6.8.2",
+    "moment": "2.29.1",
+    "node-sass": "4.14.1",
+    "normalize.css": "8.0.1",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-addons-css-transition-group": "15.6.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dates": "21.8.0",
+    "react-dom": "17.0.1",
+    "react-loading": "2.0.3",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "react-toastify": "7.0.3",
+    "reactstrap": "8.9.0",
+    "shortid": "2.2.16",
+    "url-pattern": "1.0.3",
+    "web-vitals": "0.2.4",
+    "yup": "0.32.9",
+    "zangodb": "1.0.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.21.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-only-warn": "1.0.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "prettier": "1.19.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

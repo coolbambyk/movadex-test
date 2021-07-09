@@ -5,13 +5,6 @@ import CategoryDataService from 'services/CategoryDataService';
 import TodoListHeader from './TodoListHeader';
 import TodoTable from './TodoTable';
 
-const useLiveCategories = () => {
-  return useLiveData({
-    getData: CategoryDataService.getAll,
-    listen: CategoryDataService.listenChanges,
-  });
-};
-
 const Search = (props) => {
   return (
     <input
@@ -24,7 +17,6 @@ const Search = (props) => {
 };
 
 const TodoListCard = ({ todos, setActiveStatus, activeStatus }) => {
-  const categories = useLiveCategories();
   const [filtered, setFiltered] = useState([]);
 
   useEffect(
@@ -58,14 +50,6 @@ const TodoListCard = ({ todos, setActiveStatus, activeStatus }) => {
           <TodoTable todos={filtered} />
         </CardBody>
       </Card>
-      {categories.map((category) => (
-        <Card id={category._id} className="card-tasks">
-          <TodoListHeader title={`${category.title}`} setActiveStatus={setActiveStatus} activeStatus={activeStatus} />
-          <CardBody>
-            <TodoTable todos={filtered} category={category._id} />
-          </CardBody>
-        </Card>
-      ))}
     </div>
   );
 };

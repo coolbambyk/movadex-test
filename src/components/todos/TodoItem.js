@@ -5,11 +5,11 @@ import TodoDataService from 'services/TodoDataService';
 import DueDate from './DueDate';
 
 const TodoItem = (props) => {
-  const { message, dueDate, open, _id, onRemove } = props;
+  const { message, dueDate, open, _id, onChange, onRemove } = props;
   const [modal, setModal] = useState(false);
   const [value, setValue] = useState(message);
 
-  const onChange = (event) => {
+  const onChangeVal = (event) => {
     setValue(event.target.value);
   };
   const toggle = () => setModal(!modal);
@@ -43,7 +43,7 @@ const TodoItem = (props) => {
             <div>
               <Modal isOpen={modal} toggle={toggle}>
                 <ModalBody>
-                  <Input value={value} style={{ color: '#111' }} onChange={onChange} />
+                  <Input value={value} style={{ color: '#111' }} onChange={onChangeVal} />
                 </ModalBody>
                 <ModalFooter>
                   <Button
